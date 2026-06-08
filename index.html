@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anıltale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <div id="explore-mode">
+            <div id="game-map"></div>
+            
+            <div id="dialogue-box" class="hidden">
+                <span id="dialogue-text">...</span>
+                <div class="next-prompt">[İlerlemek için Enter veya Boşluk]</div>
+            </div>
+
+            <div class="ui-panel">
+                <p><strong>CAN (HP):</strong> <span id="player-hp">100/100</span> | <strong>İKSİR:</strong> <span id="potions-count">3</span></p>
+                <div class="controls-info">Hareket: <strong>W, A, S, D</strong></div>
+            </div>
+        </div>
+
+        <div id="battle-mode" class="hidden">
+            <h2 id="battle-title">⚔️ SAVAŞ BAŞLADI ⚔️</h2>
+            <div class="battle-stats">
+                <div class="stat-box">
+                    <h3>Sen</h3>
+                    <div class="hp-bar-container">
+                        <div id="player-hp-bar" class="hp-bar player-bar" style="width: 100%;"></div>
+                    </div>
+                    <p><span id="battle-player-hp">100</span> / 100</p>
+                </div>
+                <div class="vs">VS</div>
+                <div class="stat-box">
+                    <h3 id="enemy-name">Froggit</h3>
+                    <div class="hp-bar-container">
+                        <div id="enemy-hp-bar" class="hp-bar enemy-bar" style="width: 100%;"></div>
+                    </div>
+                    <p><span id="enemy-hp">50</span> / 50</p>
+                </div>
+            </div>
+            <div id="battle-log">Kararlılıkla doluyorsunuz...</div>
+            <div class="battle-actions">
+                <button id="attack-btn" class="btn-fight">Saldır (Z)</button>
+                <button id="act-btn" class="btn-act">Konuş (C)</button>
+                <button id="item-btn" class="btn-item">Eşya (B)</button>
+                <button id="spare-btn" class="btn-spare" disabled>Bağışla (V)</button>
+                <button id="run-btn" class="btn-run">Kaç (X)</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
